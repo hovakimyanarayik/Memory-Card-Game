@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Kdam+Thmor+Pro&family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Memory Card Game</title>
+</head>
+<body>
+    <div class="contain">
+        <div class="gameContain">
+            <div class="menu">
+                <button id="startBtn" class="button">Start</button>
+                <div class="info">
+                    <p><span id="movesCount" class="number">0</span> moves</p>
+                    <p>Time: <span id="time" class="number">0</span> sec</p>
+                </div>
+            </div>
+            <div class="cardsContain" id="cards"></div>
+        </div>
+        <div class="finalMessageContain" id="finalMessageContain">
+            <h2 class="finalMessage" id="finalMessage"></h2>
+            <p>Your result: <span id="resultMoves" class="number">0</span> moves, <span id="resultTime" class="number">0</span> sec. </p>
+            <button class="button" id="close">Close</button>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>

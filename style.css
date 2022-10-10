@@ -1,0 +1,134 @@
+:root {
+    --dark: rgb(29, 18, 63);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fredoka One', cursive;
+}
+
+.contain {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(155deg, rgba(252,190,0,1) 0%, rgba(243,114,12,1) 31%, rgba(185,64,116,1) 79%, rgba(131,19,215,1) 100%);
+}
+
+.gameContain {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu {
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 15px 0;
+}
+
+
+.button {
+    padding: 5px 15px;
+    font-size: 1.3em;
+    color: white;
+    background: var(--dark);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:active {
+    transform: scale(.9, .9);
+}
+
+.info {
+    margin-left: 20px;
+}
+
+.number {
+    font-size: 1.1em;
+    color: rgb(114, 114, 243);
+}
+.menu p {
+    color: white;
+}
+
+.cardsContain {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 15px;
+    padding: 15px;
+    border-radius: 7px;
+    background: linear-gradient(310deg, rgba(252,190,0,1) 0%, rgba(243,114,12,1) 31%, rgba(185,64,116,1) 79%, rgba(131,19,215,1) 100%);
+}
+
+.card {
+    width: 120px;
+    height: 120px;
+    border-radius: 5px;
+    position: relative;
+    transition: transform .8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.open {
+    transform: rotateY(180deg);
+}
+
+.cardFace {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    backface-visibility: hidden;
+}
+
+.cardFace.back {
+    transform: rotateY(180deg);
+    padding: 10px;
+}
+
+.front {
+    background: var(--dark);
+}
+
+.finalMessageContain {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding: 40px;
+    background: rgba(131,19,215,1);
+    border-radius: 6px;
+    text-align: center;
+    color: white;
+    display: none;
+    animation: trueCard 5s ease infinite;
+
+}
+
+.finalMessageContain h2 {
+    padding: 30px 0;
+}
+
+.finalMessageContain p {
+    padding: 30px 0;
+}
+
+
+
+@keyframes trueCard {
+    0%, 100% {
+        transform: scale(1, 1) translate(-47%, -50%);
+    }
+    50% {
+        transform: scale(1.1, 1.1) translate(-50%, -50%);
+    }
+}
